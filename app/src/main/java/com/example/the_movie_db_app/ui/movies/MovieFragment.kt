@@ -1,17 +1,18 @@
 package com.example.the_movie_db_app.ui.movies
 
 
+import android.annotation.SuppressLint
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.GridLayoutManager
 
 import com.example.the_movie_db_app.R
 import com.example.the_movie_db_app.app.App
 import com.example.the_movie_db_app.app.base.fragment.BaseFragment
-import com.example.the_movie_db_app.app.base.models.BaseResponse
 import com.example.the_movie_db_app.app.di.AppComponent
+import com.example.the_movie_db_app.ui.movies.adapter.MoviesAdapter
 import com.example.the_movie_db_app.ui.movies.di.DaggerMoviesComponent
 import com.example.the_movie_db_app.ui.movies.di.MoviesModule
 import com.example.the_movie_db_app.ui.movies.models.MovieResult
@@ -34,11 +35,7 @@ class MovieFragment : BaseFragment(), MoviesContract.View {
     val TAG = MovieFragment::class.java.simpleName
 
     override fun initComponent(appComponent: AppComponent) {
-       DaggerMoviesComponent.builder().
-           appComponent(appComponent).
-           moviesModule(MoviesModule(this)).
-           build().
-           inject(this)
+        DaggerMoviesComponent.builder().appComponent(appComponent).moviesModule(MoviesModule(this)).build().inject(this)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -60,13 +57,19 @@ class MovieFragment : BaseFragment(), MoviesContract.View {
         presenter.getPopularMovies(Utils.API_KEY, Utils.LANGUAGE, Utils.PAGE.toString())
     }
 
+    @SuppressLint("CheckResult")
     override fun getPopularMoviesSuccess(result: MutableList<MovieResult>?) {
-        title.text = result!![0].title
+        recycler_view_movie.visibility = View.VISIBLE
         setupRecyclerView(result)
     }
 
     private fun setupRecyclerView(result: MutableList<MovieResult>?) {
 
+        recycler_view_movie.layoutManager = GridLayoutManager(requireContext(), 2)
+        recycler_view_movie.setHasFixedSize(true)
+        recycler_view_movie.isNestedScrollingEnabled = false
+
+        recycler_view_movie?.adapter = MoviesAdapter(result, requireContext())
     }
 
     override fun showProgress(isShow: Boolean) {

@@ -118,4 +118,8 @@ dependencies {
 
     implementation "com.vanniktech:emoji-google:$rootProject.emoji_version"
 
+    // -------- Refresh Layout ---------
+
+    implementation 'com.github.omadahealth:swipy:1.2.3@aar'
+
 }

@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         loadNavigationView()
     }
 
-    fun loadNavigationView() {
+    private fun loadNavigationView() {
 
         setSupportActionBar(toolbar)
 
@@ -49,6 +49,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         toggle.syncState()
 
         nav_view.setNavigationItemSelectedListener(this)
+        nav_view.itemIconTintList = null
         navController.navigate(R.id.movieFragment)
     }
 
@@ -80,29 +81,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         // Handle navigation view item clicks here.
         when (item.itemId) {
-            R.id.nav_home -> {
+            R.id.nav_movie -> {
                 navController.navigate(R.id.movieFragment)
-                Commons.makeToast("nav_home", this)
             }
-            R.id.nav_gallery -> {
-                navController.navigate(R.id.movieFragment)
-                Commons.makeToast("nav_gallery", this)
-            }
-            R.id.nav_slideshow -> {
-                navController.navigate(R.id.movieFragment)
-                Commons.makeToast("nav_slideshow", this)
-            }
-            R.id.nav_tools -> {
-                navController.navigate(R.id.movieFragment)
-                Commons.makeToast("nav_tools", this)
-            }
-            R.id.nav_share -> {
-                navController.navigate(R.id.movieFragment)
-                Commons.makeToast("nav_share", this)
-            }
-            R.id.nav_send -> {
-                navController.navigate(R.id.movieFragment)
-                Commons.makeToast("nav_send", this)
+            R.id.nav_serie -> {
+                navController.navigate(R.id.serieFragment)
             }
         }
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
