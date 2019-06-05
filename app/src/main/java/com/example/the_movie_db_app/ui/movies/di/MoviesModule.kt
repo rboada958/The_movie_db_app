@@ -24,7 +24,7 @@ class MoviesModule(var view: MoviesContract.View) {
 
     @Provides
     @MoviesScope
-    fun providerPresenter(interactor: MoviesInteractor) : MoviesPresenter {
-        return MoviesPresenter(interactor)
+    fun providerPresenter(interactor: MoviesInteractor, view: MoviesContract.View) : MoviesPresenter {
+        return MoviesPresenter(interactor, view)
     }
 }

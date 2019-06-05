@@ -10,6 +10,6 @@ interface MoviesContract {
     }
 
     interface View: BaseContract.View {
-        fun getPopularMoviesSuccess(result: MutableList<MovieResult?>?)
+        fun getPopularMoviesSuccess(result: MutableList<MovieResult>?)
     }
 }

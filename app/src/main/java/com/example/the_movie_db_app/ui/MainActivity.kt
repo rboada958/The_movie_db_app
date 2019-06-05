@@ -11,33 +11,41 @@ import com.google.android.material.navigation.NavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import android.view.Menu
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
 import com.example.the_movie_db_app.R
+import com.example.the_movie_db_app.utils.Commons
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.app_bar_main.*
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
+    private val navController: NavController by lazy {
+        Navigation.findNavController(this, R.id.container_home)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val toolbar: Toolbar = findViewById(R.id.toolbar)
+
+        loadNavigationView()
+    }
+
+    fun loadNavigationView() {
+
         setSupportActionBar(toolbar)
 
-        val fab: FloatingActionButton = findViewById(R.id.fab)
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
-        }
-        val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
-        val navView: NavigationView = findViewById(R.id.nav_view)
         val toggle = ActionBarDrawerToggle(
-            this, drawerLayout, toolbar,
+            this, drawer_layout, toolbar,
             R.string.navigation_drawer_open,
             R.string.navigation_drawer_close
         )
-        drawerLayout.addDrawerListener(toggle)
+
+        drawer_layout.addDrawerListener(toggle)
         toggle.syncState()
 
-        navView.setNavigationItemSelectedListener(this)
+        nav_view.setNavigationItemSelectedListener(this)
+        navController.navigate(R.id.movieFragment)
     }
 
     override fun onBackPressed() {
@@ -69,22 +77,28 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         // Handle navigation view item clicks here.
         when (item.itemId) {
             R.id.nav_home -> {
-                // Handle the camera action
+                navController.navigate(R.id.movieFragment)
+                Commons.makeToast("nav_home", this)
             }
             R.id.nav_gallery -> {
-
+                navController.navigate(R.id.movieFragment)
+                Commons.makeToast("nav_gallery", this)
             }
             R.id.nav_slideshow -> {
-
+                navController.navigate(R.id.movieFragment)
+                Commons.makeToast("nav_slideshow", this)
             }
             R.id.nav_tools -> {
-
+                navController.navigate(R.id.movieFragment)
+                Commons.makeToast("nav_tools", this)
             }
             R.id.nav_share -> {
-
+                navController.navigate(R.id.movieFragment)
+                Commons.makeToast("nav_share", this)
             }
             R.id.nav_send -> {
-
+                navController.navigate(R.id.movieFragment)
+                Commons.makeToast("nav_send", this)
             }
         }
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)

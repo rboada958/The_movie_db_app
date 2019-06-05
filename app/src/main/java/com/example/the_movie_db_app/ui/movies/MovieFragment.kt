@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import com.example.the_movie_db_app.R
 import com.example.the_movie_db_app.app.App
 import com.example.the_movie_db_app.app.base.fragment.BaseFragment
+import com.example.the_movie_db_app.app.base.models.BaseResponse
 import com.example.the_movie_db_app.app.di.AppComponent
 import com.example.the_movie_db_app.ui.movies.di.DaggerMoviesComponent
 import com.example.the_movie_db_app.ui.movies.di.MoviesModule
@@ -60,8 +61,14 @@ class MovieFragment : BaseFragment(), MoviesContract.View {
         presenter.destroyView()
     }
 
-    override fun getPopularMoviesSuccess(result: MutableList<MovieResult?>?) {
-        Log.e(TAG, result!![0].toString())
+    override fun getPopularMoviesSuccess(result: MutableList<MovieResult>?) {
+
+        setupRecyclerView(result)
+
+    }
+
+    private fun setupRecyclerView(result: MutableList<MovieResult>?) {
+
     }
 
     override fun showProgress(isShow: Boolean) {

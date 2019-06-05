@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 data class MovieResult(
 
 	@field:SerializedName("vote_count")
-	val voteCount: Int? = null,
+	val voteCount: Double? = null,
 
 	@field:SerializedName("id")
 	val id: Int? = null,
@@ -14,7 +14,7 @@ data class MovieResult(
 	val video: Boolean? = null,
 
 	@field:SerializedName("vote_average")
-	val voteAverage: Int? = null,
+	val voteAverage: Double? = null,
 
 	@field:SerializedName("title")
 	val title: String? = null,

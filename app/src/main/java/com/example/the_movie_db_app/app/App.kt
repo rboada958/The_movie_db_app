@@ -37,6 +37,7 @@ class App : Application() {
         super.onCreate()
 
         INSTANCE = this
+        initComponent()
 
         EmojiManager.install(GoogleEmojiProvider())
 
