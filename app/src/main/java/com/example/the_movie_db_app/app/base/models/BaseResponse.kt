@@ -19,7 +19,7 @@ data class BaseResponse<T>(
 	val totalPages: Int? = null,
 
 	@field:SerializedName("results")
-	val results: List<T?>? = null,
+	val results: MutableList<T?>? = null,
 
 	@field:SerializedName("dates")
 	val dates: Dates? = null

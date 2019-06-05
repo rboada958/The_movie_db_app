@@ -11,21 +11,21 @@ interface MoviesApi {
     @GET("movie/popular")
     fun getPopularMovies(
         @Query("api_key") api_key: String,
-        @Query("languaje") language: String,
+        @Query("language") language: String,
         @Query("page") page: String) :
             Observable<BaseResponse<MovieResult>>
 
     @GET("movie/upcoming")
     fun getUpComingMovies(
         @Query("api_key") api_key: String,
-        @Query("languaje") language: String,
+        @Query("language") language: String,
         @Query("page") page: String) :
             Observable<BaseResponse<MovieResult>>
 
     @GET("movie/top_rated")
     fun getTopRatedMovies(
         @Query("api_key") api_key: String,
-        @Query("languaje") language: String,
+        @Query("language") language: String,
         @Query("page") page: String) :
             Observable<BaseResponse<MovieResult>>
 }
