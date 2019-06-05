@@ -5,6 +5,10 @@ import android.os.Build
 import android.widget.Toast
 import com.example.the_movie_db_app.app.App
 
+/**
+ * Created by Romel Boada on 05/06/19.
+ */
+
 object Commons {
 
     fun makeToast(msg: String, context: Context) {

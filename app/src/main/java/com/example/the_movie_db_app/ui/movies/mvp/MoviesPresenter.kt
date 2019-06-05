@@ -7,6 +7,10 @@ import com.example.the_movie_db_app.app.base.models.BaseResponse
 import com.example.the_movie_db_app.app.base.observer.CallbackHandlingObserver
 import com.example.the_movie_db_app.ui.movies.models.MovieResult
 
+/**
+ * Created by Romel Boada on 05/06/19.
+ */
+
 class MoviesPresenter(
     private var interactor: MoviesInteractor,
     private var view: MoviesContract.View

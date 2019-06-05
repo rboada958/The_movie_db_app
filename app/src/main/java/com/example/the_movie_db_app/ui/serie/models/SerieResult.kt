@@ -2,6 +2,10 @@ package com.example.the_movie_db_app.ui.serie.models
 
 import com.google.gson.annotations.SerializedName
 
+/**
+ * Created by Romel Boada on 05/06/19.
+ */
+
 data class SerieResult(
 
 	@field:SerializedName("original_name")
@@ -20,7 +24,7 @@ data class SerieResult(
 	val originCountry: List<String?>? = null,
 
 	@field:SerializedName("vote_count")
-	val voteCount: Int? = null,
+	val voteCount: Double? = null,
 
 	@field:SerializedName("first_air_date")
 	val firstAirDate: String? = null,

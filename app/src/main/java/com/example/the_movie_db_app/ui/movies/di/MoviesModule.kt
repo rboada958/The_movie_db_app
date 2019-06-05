@@ -7,6 +7,10 @@ import com.example.the_movie_db_app.ui.movies.mvp.MoviesPresenter
 import dagger.Module
 import dagger.Provides
 
+/**
+ * Created by Romel Boada on 05/06/19.
+ */
+
 @Module
 class MoviesModule(var view: MoviesContract.View) {
 

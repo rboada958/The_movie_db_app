@@ -2,7 +2,7 @@ package com.example.the_movie_db_app.app.network.di
 
 import com.example.the_movie_db_app.app.di.AppScope
 import com.example.the_movie_db_app.ui.movies.api.MoviesApi
-import com.example.the_movie_db_app.ui.serie.SerieApi
+import com.example.the_movie_db_app.ui.serie.api.SerieApi
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit

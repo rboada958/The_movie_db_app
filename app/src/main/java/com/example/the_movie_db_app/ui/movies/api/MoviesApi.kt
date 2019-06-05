@@ -6,6 +6,10 @@ import io.reactivex.Observable
 import retrofit2.http.GET
 import retrofit2.http.Query
 
+/**
+ * Created by Romel Boada on 05/06/19.
+ */
+
 interface MoviesApi {
 
     @GET("movie/popular")

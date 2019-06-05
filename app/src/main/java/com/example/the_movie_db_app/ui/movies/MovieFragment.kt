@@ -22,6 +22,10 @@ import com.example.the_movie_db_app.utils.Utils
 import kotlinx.android.synthetic.main.fragment_movie.*
 import javax.inject.Inject
 
+/**
+ * Created by Romel Boada on 05/06/19.
+ */
+
 class MovieFragment : BaseFragment(), MoviesContract.View {
 
     @Inject
@@ -56,15 +60,9 @@ class MovieFragment : BaseFragment(), MoviesContract.View {
         presenter.getPopularMovies(Utils.API_KEY, Utils.LANGUAGE, Utils.PAGE.toString())
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        presenter.destroyView()
-    }
-
     override fun getPopularMoviesSuccess(result: MutableList<MovieResult>?) {
-
+        title.text = result!![0].title
         setupRecyclerView(result)
-
     }
 
     private fun setupRecyclerView(result: MutableList<MovieResult>?) {

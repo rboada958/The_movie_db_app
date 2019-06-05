@@ -2,7 +2,7 @@ package com.example.the_movie_db_app.app.di
 
 import com.example.the_movie_db_app.app.network.di.ApiModule
 import com.example.the_movie_db_app.ui.movies.api.MoviesApi
-import com.example.the_movie_db_app.ui.serie.SerieApi
+import com.example.the_movie_db_app.ui.serie.api.SerieApi
 import dagger.Component
 
 /**

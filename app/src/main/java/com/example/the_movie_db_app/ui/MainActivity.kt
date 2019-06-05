@@ -18,6 +18,10 @@ import com.example.the_movie_db_app.utils.Commons
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 
+/**
+ * Created by Romel Boada on 05/06/19.
+ */
+
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     private val navController: NavController by lazy {

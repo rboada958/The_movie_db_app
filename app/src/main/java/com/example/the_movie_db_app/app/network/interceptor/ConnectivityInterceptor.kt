@@ -8,6 +8,10 @@ import okhttp3.Interceptor
 import okhttp3.Request
 import okhttp3.Response
 
+/**
+ * Created by Romel Boada on 05/06/19.
+ */
+
 class ConnectivityInterceptor(var context: Context) : Interceptor {
 
     companion object {
