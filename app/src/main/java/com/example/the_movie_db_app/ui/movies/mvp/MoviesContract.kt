@@ -10,9 +10,9 @@ import com.example.the_movie_db_app.ui.movies.models.MovieResult
 interface MoviesContract {
 
     interface Presenter: BaseContract.ServicePresenter {
-        fun getPopularMovies(api_key: String, language: String, page: String)
-        fun getUpComingMovies(api_key: String, language: String, page: String)
-        fun getTopRatedMovies(api_key: String, language: String, page: String)
+        fun getPopularMovies(page: String)
+        fun getUpComingMovies(page: String)
+        fun getTopRatedMovies(page: String)
     }
 
 

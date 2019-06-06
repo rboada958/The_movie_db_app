@@ -16,9 +16,9 @@ class SeriePresenter(
 ) : SerieContract.Presenter {
 
     @SuppressLint("CheckResult")
-    override fun getPopularSerie(api_key: String, language: String, page: String) {
+    override fun getPopularSerie(page: String) {
         view.showProgress(true)
-        interactor.getPopularSerie(api_key, language, page)
+        interactor.getPopularSerie(page)
             .subscribeWith(object : CallbackHandlingObserver<BaseResponse<SerieResult>>(
                 this,
                 "ENDPOINT_POPULAR_SERIES"
@@ -31,9 +31,9 @@ class SeriePresenter(
     }
 
     @SuppressLint("CheckResult")
-    override fun getTopRatedSerie(api_key: String, language: String, page: String) {
+    override fun getTopRatedSerie(page: String) {
         view.showProgress(true)
-        interactor.getTopRatedSerie(api_key, language, page)
+        interactor.getTopRatedSerie(page)
             .subscribeWith(object : CallbackHandlingObserver<BaseResponse<SerieResult>>(
                 this,
                 "ENDPOINT_POPULAR_SERIES"
@@ -46,9 +46,9 @@ class SeriePresenter(
     }
 
     @SuppressLint("CheckResult")
-    override fun getOnTheAirSerie(api_key: String, language: String, page: String) {
+    override fun getOnTheAirSerie(page: String) {
         view.showProgress(true)
-        interactor.getOnTheAirSerie(api_key, language, page)
+        interactor.getOnTheAirSerie(page)
             .subscribeWith(object : CallbackHandlingObserver<BaseResponse<SerieResult>>(
                 this,
                 "ENDPOINT_POPULAR_SERIES"

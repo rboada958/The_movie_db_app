@@ -63,7 +63,7 @@ class SerieFragment : BaseFragment(), SerieContract.View, SerieAdapter.Listener 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        presenter.getPopularSerie(Utils.API_KEY, Utils.LANGUAGE, Utils.PAGE.toString())
+        presenter.getPopularSerie(Utils.PAGE.toString())
 
         onClick()
     }
@@ -88,13 +88,13 @@ class SerieFragment : BaseFragment(), SerieContract.View, SerieAdapter.Listener 
                 if (item > 0) {
                     when (item) {
                         1 -> {
-                            presenter.getPopularSerie(Utils.API_KEY, Utils.LANGUAGE, Utils.PAGE.toString())
+                            presenter.getPopularSerie(Utils.PAGE.toString())
                         }
                         2 -> {
-                            presenter.getTopRatedSerie(Utils.API_KEY, Utils.LANGUAGE, Utils.PAGE.toString())
+                            presenter.getTopRatedSerie(Utils.PAGE.toString())
                         }
                         3 -> {
-                            presenter.getOnTheAirSerie(Utils.API_KEY, Utils.LANGUAGE, Utils.PAGE.toString())
+                            presenter.getOnTheAirSerie(Utils.PAGE.toString())
                         }
                     }
                 }

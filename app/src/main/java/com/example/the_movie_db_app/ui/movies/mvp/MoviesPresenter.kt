@@ -18,9 +18,9 @@ class MoviesPresenter(
 
 
     @SuppressLint("CheckResult")
-    override fun getPopularMovies(api_key: String, language: String, page: String) {
+    override fun getPopularMovies(page: String) {
         view?.showProgress(true)
-        interactor.getPopularMovies(api_key, language, page)
+        interactor.getPopularMovies(page)
             .subscribeWith(object : CallbackHandlingObserver<BaseResponse<MovieResult>>(
                 this,
                 "ENDPOINT_POPULAR_MOVIES"
@@ -34,9 +34,9 @@ class MoviesPresenter(
     }
 
     @SuppressLint("CheckResult")
-    override fun getUpComingMovies(api_key: String, language: String, page: String) {
+    override fun getUpComingMovies(page: String) {
         view?.showProgress(true)
-        interactor.getUpComingMovies(api_key, language, page)
+        interactor.getUpComingMovies(page)
             .subscribeWith(object : CallbackHandlingObserver<BaseResponse<MovieResult>>(
                 this,
                 "ENDPOINT_POPULAR_MOVIES"
@@ -50,9 +50,9 @@ class MoviesPresenter(
     }
 
     @SuppressLint("CheckResult")
-    override fun getTopRatedMovies(api_key: String, language: String, page: String) {
+    override fun getTopRatedMovies(page: String) {
         view?.showProgress(true)
-        interactor.getTopRatedMovies(api_key, language, page)
+        interactor.getTopRatedMovies(page)
             .subscribeWith(object : CallbackHandlingObserver<BaseResponse<MovieResult>>(
                 this,
                 "ENDPOINT_POPULAR_MOVIES"

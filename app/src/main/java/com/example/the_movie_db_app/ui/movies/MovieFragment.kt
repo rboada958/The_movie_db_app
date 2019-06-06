@@ -63,7 +63,7 @@ class MovieFragment : BaseFragment(), MoviesContract.View, MoviesAdapter.Listene
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        presenter.getPopularMovies(Utils.API_KEY, Utils.LANGUAGE, Utils.PAGE.toString())
+        presenter.getPopularMovies(Utils.PAGE.toString())
 
         onClick()
     }
@@ -93,13 +93,13 @@ class MovieFragment : BaseFragment(), MoviesContract.View, MoviesAdapter.Listene
                 if (item > 0) {
                     when (item) {
                         1 -> {
-                            presenter.getPopularMovies(Utils.API_KEY, Utils.LANGUAGE, Utils.PAGE.toString())
+                            presenter.getPopularMovies(Utils.PAGE.toString())
                         }
                         2 -> {
-                            presenter.getTopRatedMovies(Utils.API_KEY, Utils.LANGUAGE, Utils.PAGE.toString())
+                            presenter.getTopRatedMovies(Utils.PAGE.toString())
                         }
                         3 -> {
-                            presenter.getUpComingMovies(Utils.API_KEY, Utils.LANGUAGE, Utils.PAGE.toString())
+                            presenter.getUpComingMovies(Utils.PAGE.toString())
                         }
                     }
                 }

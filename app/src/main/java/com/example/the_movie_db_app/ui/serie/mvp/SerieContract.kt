@@ -10,9 +10,9 @@ import com.example.the_movie_db_app.ui.serie.models.SerieResult
 interface SerieContract {
 
     interface Presenter: BaseContract.ServicePresenter {
-        fun getPopularSerie(api_key: String, language: String, page: String)
-        fun getTopRatedSerie(api_key: String, language: String, page: String)
-        fun getOnTheAirSerie(api_key: String, language: String, page: String)
+        fun getPopularSerie(page: String)
+        fun getTopRatedSerie(page: String)
+        fun getOnTheAirSerie(page: String)
     }
 
     interface View: BaseContract.View {
