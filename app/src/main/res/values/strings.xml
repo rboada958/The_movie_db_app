@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">The_movie_db_app</string>
+    <string name="app_name">The Movie DB App</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -31,6 +31,9 @@
     <string name="serie">Serie</string>
     <string name="title">Title</string>
     <string name="rated">Rated</string>
+    <string name="original_title">Original title</string>
+    <string name="release_date">Release date</string>
+    <string name="overview">Overview</string>
 
     <string-array name="category">
         <item>Select Categorie Movie</item>
@@ -41,8 +44,8 @@
 
     <string-array name="category_serie">
         <item>Select Series Category</item>
-        <item>Popular Movies</item>
-        <item>Top Rated Movies</item>
+        <item>Popular Serie</item>
+        <item>Top Rated Serie</item>
         <item>On The Air Serie</item>
     </string-array>
 

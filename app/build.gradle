@@ -6,6 +6,8 @@ apply plugin: 'kotlin-android-extensions'
 
 apply plugin: 'kotlin-kapt'
 
+apply plugin: 'org.jetbrains.kotlin.android.extensions'
+
 android {
     compileSdkVersion 28
     defaultConfig {
@@ -62,6 +64,10 @@ android {
         checkReleaseBuilds false
     }
     productFlavors {
+    }
+
+    androidExtensions {
+        experimental = true
     }
 }
 

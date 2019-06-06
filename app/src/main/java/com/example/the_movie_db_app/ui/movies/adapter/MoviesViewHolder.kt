@@ -30,7 +30,8 @@ class MoviesViewHolder(itemView: View?) : RecyclerView.ViewHolder(itemView!!) {
     fun bindViewHolder(
         movieResult: MovieResult,
         adapterPosition: Int,
-        context: Context
+        context: Context,
+        mListener: MoviesAdapter.Listener
     ) {
 
         itemView.tv_title.text = movieResult.title
@@ -39,5 +40,9 @@ class MoviesViewHolder(itemView: View?) : RecyclerView.ViewHolder(itemView!!) {
         Glide.with(context)
             .load(Utils.getBackDropUrl(movieResult.backdropPath!!))
             .into(itemView.iv_path)
+
+        itemView.setOnClickListener {
+            mListener.onClick(movieResult)
+        }
     }
 }

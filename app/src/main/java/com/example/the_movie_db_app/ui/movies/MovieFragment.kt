@@ -27,13 +27,16 @@ import kotlinx.android.synthetic.main.fragment_movie.*
 import javax.inject.Inject
 import android.widget.TextView
 import android.graphics.Color
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
+import com.example.the_movie_db_app.ui.MainActivity
 
 
 /**
  * Created by Romel Boada on 05/06/19.
  */
 
-class MovieFragment : BaseFragment(), MoviesContract.View {
+class MovieFragment : BaseFragment(), MoviesContract.View, MoviesAdapter.Listener {
 
     @Inject
     lateinit var presenter: MoviesPresenter
@@ -72,33 +75,33 @@ class MovieFragment : BaseFragment(), MoviesContract.View {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinner_category.adapter = adapter
 
-        spinner_category.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-            }
-
-            override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
-
-                (parent.getChildAt(0) as TextView).setTextColor(Color.WHITE)
-
-                val item = parent.selectedItemPosition
-                Log.e(TAG, "$item")
-                if (item > 0) {
-                    when (item) {
-                        1 -> {
-                            presenter.getPopularMovies(Utils.API_KEY, Utils.LANGUAGE, Utils.PAGE.toString())
-                        }
-                        2 -> {
-                            presenter.getTopRatedMovies(Utils.API_KEY, Utils.LANGUAGE, Utils.PAGE.toString())
-                        }
-                        3 -> {
-                            presenter.getUpComingMovies(Utils.API_KEY, Utils.LANGUAGE, Utils.PAGE.toString())
-                        }
-                    }
-                }
-            }
-        }
+//        spinner_category.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+//
+//            override fun onNothingSelected(parent: AdapterView<*>?) {
+//                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+//            }
+//
+//            override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
+////
+////                (parent.getChildAt(0) as TextView).setTextColor(Color.WHITE)
+////
+////                val item = parent.selectedItemPosition
+////                Log.e(TAG, "$item")
+////                if (item > 0) {
+////                    when (item) {
+////                        1 -> {
+////                            presenter.getPopularMovies(Utils.API_KEY, Utils.LANGUAGE, Utils.PAGE.toString())
+////                        }
+////                        2 -> {
+////                            presenter.getTopRatedMovies(Utils.API_KEY, Utils.LANGUAGE, Utils.PAGE.toString())
+////                        }
+////                        3 -> {
+////                            presenter.getUpComingMovies(Utils.API_KEY, Utils.LANGUAGE, Utils.PAGE.toString())
+////                        }
+////                    }
+////                }
+//            }
+//        }
     }
 
     @SuppressLint("CheckResult")
@@ -123,7 +126,7 @@ class MovieFragment : BaseFragment(), MoviesContract.View {
         recycler_view_movie.setHasFixedSize(true)
         recycler_view_movie.isNestedScrollingEnabled = false
 
-        recycler_view_movie?.adapter = MoviesAdapter(result, requireContext())
+        recycler_view_movie?.adapter = MoviesAdapter(result, requireContext(), this)
     }
 
     override fun showProgress(isShow: Boolean) {
@@ -132,6 +135,12 @@ class MovieFragment : BaseFragment(), MoviesContract.View {
 
     override fun makeToast(msg: Int) {
         Commons.makeToast(getString(msg), requireContext())
+    }
+
+    override fun onClick(resultItem: MovieResult?) {
+        val bundle = Bundle()
+        bundle.putParcelable("resultItem", resultItem)
+        findNavController().navigate(R.id.action_movieFragment_to_movieDetailsFragment, bundle)
     }
 
 }

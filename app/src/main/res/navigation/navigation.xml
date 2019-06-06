@@ -10,12 +10,24 @@
             android:id="@+id/movieFragment"
             android:name="com.example.the_movie_db_app.ui.movies.MovieFragment"
             android:label="fragment_movie"
-            tools:layout="@layout/fragment_movie"/>
+            tools:layout="@layout/fragment_movie">
+        <action android:id="@+id/action_movieFragment_to_movieDetailsFragment"
+                app:destination="@id/movieDetailsFragment"
+                app:enterAnim="@anim/slide_right_in"
+                app:exitAnim="@anim/slide_left_out"
+                app:popEnterAnim="@anim/slide_left_in"
+                app:popExitAnim="@anim/slide_right_out"/>
+    </fragment>
 
     <fragment
             android:id="@+id/serieFragment"
             android:name="com.example.the_movie_db_app.ui.serie.SerieFragment"
             android:label="fragment_serie"
             tools:layout="@layout/fragment_serie"/>
+
+    <fragment android:id="@+id/movieDetailsFragment"
+              android:name="com.example.the_movie_db_app.ui.movies.MovieDetailsFragment"
+              android:label="fragment_movie_details"
+              tools:layout="@layout/fragment_movie_details"/>
 
 </navigation>

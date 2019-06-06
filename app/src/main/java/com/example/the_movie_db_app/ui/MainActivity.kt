@@ -37,6 +37,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     private fun loadNavigationView() {
 
+        toolbar.title = getString(R.string.app_name)
         setSupportActionBar(toolbar)
 
         val toggle = ActionBarDrawerToggle(
@@ -54,9 +55,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     override fun onBackPressed() {
-        val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
-        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
-            drawerLayout.closeDrawer(GravityCompat.START)
+        if (drawer_layout.isDrawerOpen(GravityCompat.START)) {
+            drawer_layout.closeDrawer(GravityCompat.START)
         } else {
             super.onBackPressed()
         }
@@ -83,13 +83,15 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         when (item.itemId) {
             R.id.nav_movie -> {
                 navController.navigate(R.id.movieFragment)
+                toolbar.title = getString(R.string.movie)
             }
             R.id.nav_serie -> {
                 navController.navigate(R.id.serieFragment)
+                toolbar.title = getString(R.string.serie)
             }
         }
-        val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
-        drawerLayout.closeDrawer(GravityCompat.START)
+
+        drawer_layout.closeDrawer(GravityCompat.START)
         return true
     }
 }

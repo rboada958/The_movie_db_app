@@ -11,7 +11,8 @@ import com.example.the_movie_db_app.ui.movies.models.MovieResult
 
 class MoviesAdapter(
     private var result: MutableList<MovieResult>?,
-    private var context: Context
+    private var context: Context,
+    private var mListener: Listener
 ) : RecyclerView.Adapter<MoviesViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = MoviesViewHolder.newInstance(parent)
@@ -19,6 +20,10 @@ class MoviesAdapter(
     override fun getItemCount() = result!!.size
 
     override fun onBindViewHolder(holder: MoviesViewHolder, position: Int) {
-        holder.bindViewHolder(result!![ holder.adapterPosition], holder.adapterPosition, context)
+        holder.bindViewHolder(result!![ holder.adapterPosition], holder.adapterPosition, context, mListener)
+    }
+
+    interface Listener {
+        fun onClick(resultItem: MovieResult?)
     }
 }
