@@ -30,7 +30,8 @@ class SerieViewHolder(itemView: View?) : RecyclerView.ViewHolder(itemView!!) {
     fun bindViewHolder(
         serieResult: SerieResult,
         adapterPosition: Int,
-        context: Context
+        context: Context,
+        mListener: SerieAdapter.Listener
     ) {
 
         itemView.tv_title.text = serieResult.name
@@ -39,5 +40,9 @@ class SerieViewHolder(itemView: View?) : RecyclerView.ViewHolder(itemView!!) {
         Glide.with(context)
             .load(Utils.getBackDropUrl(serieResult.backdropPath!!))
             .into(itemView.iv_path)
+
+        itemView.setOnClickListener {
+            mListener.onClick(serieResult)
+        }
     }
 }

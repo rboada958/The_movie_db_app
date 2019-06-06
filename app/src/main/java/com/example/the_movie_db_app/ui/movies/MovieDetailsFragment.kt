@@ -14,6 +14,10 @@ import com.example.the_movie_db_app.ui.movies.models.MovieResult
 import com.example.the_movie_db_app.utils.Utils
 import kotlinx.android.synthetic.main.fragment_movie_details.*
 
+/**
+ * Created by Romel Boada on 05/06/19.
+ */
+
 class MovieDetailsFragment : Fragment() {
 
     val TAG = MovieDetailsFragment::class.java.simpleName
@@ -33,7 +37,6 @@ class MovieDetailsFragment : Fragment() {
         onClick()
 
         if (arguments != null) {
-            arguments!!.getParcelable<MovieResult>("resultItem")
             movieResult =  arguments!!.getParcelable("resultItem")
             loadData(movieResult)
         }

@@ -68,6 +68,11 @@ class MovieFragment : BaseFragment(), MoviesContract.View, MoviesAdapter.Listene
         onClick()
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        presenter.destroyView()
+    }
+
     private fun onClick() {
 
         val adapter =
@@ -75,33 +80,32 @@ class MovieFragment : BaseFragment(), MoviesContract.View, MoviesAdapter.Listene
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinner_category.adapter = adapter
 
-//        spinner_category.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-//
-//            override fun onNothingSelected(parent: AdapterView<*>?) {
-//                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-//            }
-//
-//            override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
-////
-////                (parent.getChildAt(0) as TextView).setTextColor(Color.WHITE)
-////
-////                val item = parent.selectedItemPosition
-////                Log.e(TAG, "$item")
-////                if (item > 0) {
-////                    when (item) {
-////                        1 -> {
-////                            presenter.getPopularMovies(Utils.API_KEY, Utils.LANGUAGE, Utils.PAGE.toString())
-////                        }
-////                        2 -> {
-////                            presenter.getTopRatedMovies(Utils.API_KEY, Utils.LANGUAGE, Utils.PAGE.toString())
-////                        }
-////                        3 -> {
-////                            presenter.getUpComingMovies(Utils.API_KEY, Utils.LANGUAGE, Utils.PAGE.toString())
-////                        }
-////                    }
-////                }
-//            }
-//        }
+        spinner_category.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                Log.e(TAG, TAG)
+            }
+
+            override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
+
+                val item = parent.selectedItemPosition
+
+                if (item > 0) {
+                    when (item) {
+                        1 -> {
+                            presenter.getPopularMovies(Utils.API_KEY, Utils.LANGUAGE, Utils.PAGE.toString())
+                        }
+                        2 -> {
+                            presenter.getTopRatedMovies(Utils.API_KEY, Utils.LANGUAGE, Utils.PAGE.toString())
+                        }
+                        3 -> {
+                            presenter.getUpComingMovies(Utils.API_KEY, Utils.LANGUAGE, Utils.PAGE.toString())
+                        }
+                    }
+                }
+
+            }
+        }
     }
 
     @SuppressLint("CheckResult")

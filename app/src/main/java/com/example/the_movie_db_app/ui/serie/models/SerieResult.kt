@@ -1,11 +1,13 @@
 package com.example.the_movie_db_app.ui.serie.models
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
 /**
  * Created by Romel Boada on 05/06/19.
  */
-
+@Parcelize
 data class SerieResult(
 
 	@field:SerializedName("original_name")
@@ -46,4 +48,4 @@ data class SerieResult(
 
 	@field:SerializedName("poster_path")
 	val posterPath: String? = null
-)
+) : Parcelable

@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.TextView
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 
 import com.example.the_movie_db_app.R
@@ -31,7 +32,7 @@ import javax.inject.Inject
  * Created by Romel Boada on 05/06/19.
  */
 
-class SerieFragment : BaseFragment(), SerieContract.View {
+class SerieFragment : BaseFragment(), SerieContract.View, SerieAdapter.Listener {
 
     @Inject
     lateinit var presenter: SeriePresenter
@@ -80,9 +81,7 @@ class SerieFragment : BaseFragment(), SerieContract.View {
                 TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
             }
 
-            override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
-
-                (parent.getChildAt(0) as TextView).setTextColor(Color.WHITE)
+            override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
 
                 val item = parent.selectedItemPosition
                 Log.e(TAG, "$item")
@@ -124,7 +123,7 @@ class SerieFragment : BaseFragment(), SerieContract.View {
         recycler_view_serie.setHasFixedSize(true)
         recycler_view_serie.isNestedScrollingEnabled = false
 
-        recycler_view_serie?.adapter = SerieAdapter(result, requireContext())
+        recycler_view_serie?.adapter = SerieAdapter(result, requireContext(), this)
     }
 
     override fun showProgress(isShow: Boolean) {
@@ -133,6 +132,13 @@ class SerieFragment : BaseFragment(), SerieContract.View {
 
     override fun makeToast(msg: Int) {
         Commons.makeToast(getString(msg), requireContext())
+    }
+
+    override fun onClick(resultItem: SerieResult) {
+        val bundle = Bundle()
+        bundle.putParcelable("resultItemSerie", resultItem)
+        findNavController().navigate(R.id.action_serieFragment_to_serieDetailsFragment, bundle)
+
     }
 
 }

@@ -11,7 +11,8 @@ import com.example.the_movie_db_app.ui.serie.models.SerieResult
 
 class SerieAdapter(
     private var result: MutableList<SerieResult>?,
-    private var context: Context
+    private var context: Context,
+    private var mListener: Listener
 ) : RecyclerView.Adapter<SerieViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = SerieViewHolder.newInstance(parent)
@@ -19,6 +20,10 @@ class SerieAdapter(
     override fun getItemCount() = result!!.size
 
     override fun onBindViewHolder(holder: SerieViewHolder, position: Int) {
-        holder.bindViewHolder(result!![holder.adapterPosition], holder.adapterPosition, context)
+        holder.bindViewHolder(result!![holder.adapterPosition], holder.adapterPosition, context, mListener)
+    }
+
+    interface Listener {
+        fun onClick(resultItem: SerieResult)
     }
 }
