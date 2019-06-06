@@ -11,9 +11,15 @@ interface MoviesContract {
 
     interface Presenter: BaseContract.ServicePresenter {
         fun getPopularMovies(api_key: String, language: String, page: String)
+        fun getUpComingMovies(api_key: String, language: String, page: String)
+        fun getTopRatedMovies(api_key: String, language: String, page: String)
     }
+
+
 
     interface View: BaseContract.View {
         fun getPopularMoviesSuccess(result: MutableList<MovieResult>?)
+        fun getUpComingMoviesSuccess(result: MutableList<MovieResult>?)
+        fun getTopRatedMoviesSuccess(result: MutableList<MovieResult>?)
     }
 }

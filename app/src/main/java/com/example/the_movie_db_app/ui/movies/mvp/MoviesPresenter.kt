@@ -33,6 +33,38 @@ class MoviesPresenter(
             })
     }
 
+    @SuppressLint("CheckResult")
+    override fun getUpComingMovies(api_key: String, language: String, page: String) {
+        view.showProgress(true)
+        interactor.getUpComingMovies(api_key, language, page)
+            .subscribeWith(object : CallbackHandlingObserver<BaseResponse<MovieResult>>(
+                this,
+                "ENDPOINT_POPULAR_MOVIES"
+            ) {
+                override fun onSuccess(data: BaseResponse<MovieResult>) {
+                    view.showProgress(false)
+                    view.getUpComingMoviesSuccess(data.results)
+                }
+
+            })
+    }
+
+    @SuppressLint("CheckResult")
+    override fun getTopRatedMovies(api_key: String, language: String, page: String) {
+        view.showProgress(true)
+        interactor.getTopRatedMovies(api_key, language, page)
+            .subscribeWith(object : CallbackHandlingObserver<BaseResponse<MovieResult>>(
+                this,
+                "ENDPOINT_POPULAR_MOVIES"
+            ) {
+                override fun onSuccess(data: BaseResponse<MovieResult>) {
+                    view.showProgress(false)
+                    view.getTopRatedMoviesSuccess(data.results)
+                }
+
+            })
+    }
+
     override fun destroyView() {
     }
 

@@ -3,9 +3,12 @@ package com.example.the_movie_db_app.ui.movies
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import androidx.recyclerview.widget.GridLayoutManager
 
 import com.example.the_movie_db_app.R
@@ -22,6 +25,9 @@ import com.example.the_movie_db_app.utils.Commons
 import com.example.the_movie_db_app.utils.Utils
 import kotlinx.android.synthetic.main.fragment_movie.*
 import javax.inject.Inject
+import android.widget.TextView
+import android.graphics.Color
+
 
 /**
  * Created by Romel Boada on 05/06/19.
@@ -55,10 +61,58 @@ class MovieFragment : BaseFragment(), MoviesContract.View {
         super.onViewCreated(view, savedInstanceState)
 
         presenter.getPopularMovies(Utils.API_KEY, Utils.LANGUAGE, Utils.PAGE.toString())
+
+        onClick()
+    }
+
+    private fun onClick() {
+
+        val adapter =
+            ArrayAdapter.createFromResource(requireContext(), R.array.category, android.R.layout.simple_spinner_item)
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        spinner_category.adapter = adapter
+
+        spinner_category.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+            }
+
+            override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
+
+                (parent.getChildAt(0) as TextView).setTextColor(Color.WHITE)
+
+                val item = parent.selectedItemPosition
+                Log.e(TAG, "$item")
+                if (item > 0) {
+                    when (item) {
+                        1 -> {
+                            presenter.getPopularMovies(Utils.API_KEY, Utils.LANGUAGE, Utils.PAGE.toString())
+                        }
+                        2 -> {
+                            presenter.getTopRatedMovies(Utils.API_KEY, Utils.LANGUAGE, Utils.PAGE.toString())
+                        }
+                        3 -> {
+                            presenter.getUpComingMovies(Utils.API_KEY, Utils.LANGUAGE, Utils.PAGE.toString())
+                        }
+                    }
+                }
+            }
+        }
     }
 
     @SuppressLint("CheckResult")
     override fun getPopularMoviesSuccess(result: MutableList<MovieResult>?) {
+        recycler_view_movie.visibility = View.VISIBLE
+        setupRecyclerView(result)
+    }
+
+    override fun getUpComingMoviesSuccess(result: MutableList<MovieResult>?) {
+        recycler_view_movie.visibility = View.VISIBLE
+        setupRecyclerView(result)
+    }
+
+    override fun getTopRatedMoviesSuccess(result: MutableList<MovieResult>?) {
         recycler_view_movie.visibility = View.VISIBLE
         setupRecyclerView(result)
     }

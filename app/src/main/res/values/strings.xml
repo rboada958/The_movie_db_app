@@ -32,4 +32,11 @@
     <string name="title">Title</string>
     <string name="rated">Rated</string>
 
+    <string-array name="category">
+        <item>Select Categorie</item>
+        <item>Popular Movies</item>
+        <item>Top Rated Movies</item>
+        <item>Up Coming Movies</item>
+    </string-array>
+
 </resources>
