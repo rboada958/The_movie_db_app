@@ -14,4 +14,12 @@ class SerieInteractor(var serieApi: SerieApi) {
         serieApi.getPopularSerie(api_key, language, page).subscribeOn(Schedulers.io()).observeOn(
             AndroidSchedulers.mainThread())!!
 
+    fun getTopRatedSerie(api_key: String, language: String, page: String) =
+        serieApi.getTopRatedSerie(api_key, language, page).subscribeOn(Schedulers.io()).observeOn(
+            AndroidSchedulers.mainThread())!!
+
+    fun getOnTheAirSerie(api_key: String, language: String, page: String) =
+        serieApi.getOnTheAirSerie(api_key, language, page).subscribeOn(Schedulers.io()).observeOn(
+            AndroidSchedulers.mainThread())!!
+
 }

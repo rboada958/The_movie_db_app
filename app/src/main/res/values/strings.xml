@@ -33,10 +33,17 @@
     <string name="rated">Rated</string>
 
     <string-array name="category">
-        <item>Select Categorie</item>
+        <item>Select Categorie Movie</item>
         <item>Popular Movies</item>
         <item>Top Rated Movies</item>
-        <item>Up Coming Movies</item>
+        <item>UpComing Movies</item>
+    </string-array>
+
+    <string-array name="category_serie">
+        <item>Select Series Category</item>
+        <item>Popular Movies</item>
+        <item>Top Rated Movies</item>
+        <item>On The Air Serie</item>
     </string-array>
 
 </resources>

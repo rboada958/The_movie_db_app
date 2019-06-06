@@ -11,9 +11,13 @@ interface SerieContract {
 
     interface Presenter: BaseContract.ServicePresenter {
         fun getPopularSerie(api_key: String, language: String, page: String)
+        fun getTopRatedSerie(api_key: String, language: String, page: String)
+        fun getOnTheAirSerie(api_key: String, language: String, page: String)
     }
 
     interface View: BaseContract.View {
         fun getPopularSerieSuccess(result: MutableList<SerieResult>?)
+        fun getTopRatedSerieSuccess(result: MutableList<SerieResult>?)
+        fun getOnTheAirSerieSuccess(result: MutableList<SerieResult>?)
     }
 }

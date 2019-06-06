@@ -30,6 +30,36 @@ class SeriePresenter(
             })
     }
 
+    @SuppressLint("CheckResult")
+    override fun getTopRatedSerie(api_key: String, language: String, page: String) {
+        view.showProgress(true)
+        interactor.getTopRatedSerie(api_key, language, page)
+            .subscribeWith(object : CallbackHandlingObserver<BaseResponse<SerieResult>>(
+                this,
+                "ENDPOINT_POPULAR_SERIES"
+            ) {
+                override fun onSuccess(data: BaseResponse<SerieResult>) {
+                    view.showProgress(false)
+                    view.getTopRatedSerieSuccess(data.results)
+                }
+            })
+    }
+
+    @SuppressLint("CheckResult")
+    override fun getOnTheAirSerie(api_key: String, language: String, page: String) {
+        view.showProgress(true)
+        interactor.getOnTheAirSerie(api_key, language, page)
+            .subscribeWith(object : CallbackHandlingObserver<BaseResponse<SerieResult>>(
+                this,
+                "ENDPOINT_POPULAR_SERIES"
+            ) {
+                override fun onSuccess(data: BaseResponse<SerieResult>) {
+                    view.showProgress(false)
+                    view.getOnTheAirSerieSuccess(data.results)
+                }
+            })
+    }
+
     override fun destroyView() {
     }
 
