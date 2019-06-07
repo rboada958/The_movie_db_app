@@ -63,8 +63,6 @@ class MovieFragment : BaseFragment(), MoviesContract.View, MoviesAdapter.Listene
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        presenter.getPopularMovies(Utils.PAGE.toString())
-
         onClick()
     }
 
@@ -76,8 +74,8 @@ class MovieFragment : BaseFragment(), MoviesContract.View, MoviesAdapter.Listene
     private fun onClick() {
 
         val adapter =
-            ArrayAdapter.createFromResource(requireContext(), R.array.category, android.R.layout.simple_spinner_item)
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            ArrayAdapter.createFromResource(requireContext(), R.array.category, R.layout.spinner_item)
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_item)
         spinner_category.adapter = adapter
 
         spinner_category.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
@@ -88,22 +86,24 @@ class MovieFragment : BaseFragment(), MoviesContract.View, MoviesAdapter.Listene
 
             override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
 
-                val item = parent.selectedItemPosition
-
-                if (item > 0) {
-                    when (item) {
-                        1 -> {
-                            presenter.getPopularMovies(Utils.PAGE.toString())
-                        }
-                        2 -> {
-                            presenter.getTopRatedMovies(Utils.PAGE.toString())
-                        }
-                        3 -> {
-                            presenter.getUpComingMovies(Utils.PAGE.toString())
-                        }
+                when (parent.selectedItemPosition) {
+                    0 -> {
+                        icon_movie.visibility = View.VISIBLE
+                        recycler_view_movie.visibility = View.GONE
+                    }
+                    1 -> {
+                        icon_movie.visibility = View.GONE
+                        presenter.getPopularMovies(Utils.PAGE.toString())
+                    }
+                    2 -> {
+                        icon_movie.visibility = View.GONE
+                        presenter.getTopRatedMovies(Utils.PAGE.toString())
+                    }
+                    3 -> {
+                        icon_movie.visibility = View.GONE
+                        presenter.getUpComingMovies(Utils.PAGE.toString())
                     }
                 }
-
             }
         }
     }
@@ -139,6 +139,7 @@ class MovieFragment : BaseFragment(), MoviesContract.View, MoviesAdapter.Listene
 
     override fun makeToast(msg: Int) {
         Commons.makeToast(getString(msg), requireContext())
+        icon_movie.visibility = View.VISIBLE
     }
 
     override fun onClick(resultItem: MovieResult?) {

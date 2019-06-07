@@ -1,18 +1,14 @@
 package com.example.the_movie_db_app.ui.serie
 
 
-import android.graphics.Color
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
-import android.widget.TextView
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-
 import com.example.the_movie_db_app.R
 import com.example.the_movie_db_app.app.App
 import com.example.the_movie_db_app.app.base.fragment.BaseFragment
@@ -40,11 +36,7 @@ class SerieFragment : BaseFragment(), SerieContract.View, SerieAdapter.Listener 
     val TAG = SerieFragment::class.java.simpleName
 
     override fun initComponent(appComponent: AppComponent) {
-        DaggerSerieComponent.builder().
-            appComponent(appComponent).
-            serieModule(SerieModule(this)).
-            build().
-            inject(this)
+        DaggerSerieComponent.builder().appComponent(appComponent).serieModule(SerieModule(this)).build().inject(this)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -63,16 +55,14 @@ class SerieFragment : BaseFragment(), SerieContract.View, SerieAdapter.Listener 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        presenter.getPopularSerie(Utils.PAGE.toString())
-
         onClick()
     }
 
     private fun onClick() {
 
         val adapter =
-            ArrayAdapter.createFromResource(requireContext(), R.array.category_serie, android.R.layout.simple_spinner_item)
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            ArrayAdapter.createFromResource(requireContext(), R.array.category_serie, R.layout.spinner_item)
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_item)
         spinner_category.adapter = adapter
 
         spinner_category.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
@@ -83,19 +73,23 @@ class SerieFragment : BaseFragment(), SerieContract.View, SerieAdapter.Listener 
 
             override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
 
-                val item = parent.selectedItemPosition
-                Log.e(TAG, "$item")
-                if (item > 0) {
-                    when (item) {
-                        1 -> {
-                            presenter.getPopularSerie(Utils.PAGE.toString())
-                        }
-                        2 -> {
-                            presenter.getTopRatedSerie(Utils.PAGE.toString())
-                        }
-                        3 -> {
-                            presenter.getOnTheAirSerie(Utils.PAGE.toString())
-                        }
+
+                when (parent.selectedItemPosition) {
+                    0 -> {
+                        icon_serie.visibility = View.VISIBLE
+                        recycler_view_serie.visibility = View.GONE
+                    }
+                    1 -> {
+                        icon_serie.visibility = View.GONE
+                        presenter.getPopularSerie(Utils.PAGE.toString())
+                    }
+                    2 -> {
+                        icon_serie.visibility = View.GONE
+                        presenter.getTopRatedSerie(Utils.PAGE.toString())
+                    }
+                    3 -> {
+                        icon_serie.visibility = View.GONE
+                        presenter.getOnTheAirSerie(Utils.PAGE.toString())
                     }
                 }
             }
@@ -132,6 +126,7 @@ class SerieFragment : BaseFragment(), SerieContract.View, SerieAdapter.Listener 
 
     override fun makeToast(msg: Int) {
         Commons.makeToast(getString(msg), requireContext())
+        icon_serie.visibility = View.VISIBLE
     }
 
     override fun onClick(resultItem: SerieResult) {
