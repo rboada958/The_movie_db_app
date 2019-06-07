@@ -2,6 +2,8 @@ package com.example.the_movie_db_app.ui.serie.adapter
 
 import android.content.Context
 import android.view.ViewGroup
+import android.widget.Filter
+import android.widget.Filterable
 import androidx.recyclerview.widget.RecyclerView
 import com.example.the_movie_db_app.ui.serie.models.SerieResult
 
@@ -11,9 +13,44 @@ import com.example.the_movie_db_app.ui.serie.models.SerieResult
 
 class SerieAdapter(
     private var result: MutableList<SerieResult>?,
+    private var resultFull: MutableList<SerieResult>,
     private var context: Context,
     private var mListener: Listener
-) : RecyclerView.Adapter<SerieViewHolder>(){
+) : RecyclerView.Adapter<SerieViewHolder>(), Filterable {
+
+    override fun getFilter(): Filter {
+        return listFilter
+    }
+
+    private val listFilter = object : Filter() {
+        override fun performFiltering(constraint: CharSequence?): FilterResults {
+            val filteredList : MutableList<SerieResult> = mutableListOf()
+
+            if (constraint == null || constraint.isEmpty()) {
+                filteredList.addAll(resultFull)
+            } else {
+                val filterPattern = constraint.toString().toLowerCase().trim { it <= ' ' }
+
+                for (item in resultFull) {
+                    if (item.name!!.toLowerCase().contains(filterPattern)) {
+                        filteredList.add(item)
+                    }
+                }
+            }
+
+            val results = FilterResults()
+            results.values = filteredList
+
+            return results
+
+        }
+
+        override fun publishResults(constraint: CharSequence, results: FilterResults) {
+            result!!.clear()
+            result!!.addAll(results.values as Collection<SerieResult>)
+            notifyDataSetChanged()
+        }
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = SerieViewHolder.newInstance(parent)
 

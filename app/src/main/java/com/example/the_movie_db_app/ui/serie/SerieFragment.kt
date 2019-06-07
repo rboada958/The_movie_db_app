@@ -2,11 +2,11 @@ package com.example.the_movie_db_app.ui.serie
 
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
+import android.view.inputmethod.EditorInfo
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import androidx.appcompat.widget.SearchView
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.the_movie_db_app.R
@@ -33,6 +33,8 @@ class SerieFragment : BaseFragment(), SerieContract.View, SerieAdapter.Listener 
     @Inject
     lateinit var presenter: SeriePresenter
 
+    private lateinit var serieAdapter: SerieAdapter
+
     val TAG = SerieFragment::class.java.simpleName
 
     override fun initComponent(appComponent: AppComponent) {
@@ -42,6 +44,7 @@ class SerieFragment : BaseFragment(), SerieContract.View, SerieAdapter.Listener 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         initComponent(App.get().component())
+        setHasOptionsMenu(true)
     }
 
     override fun onCreateView(
@@ -117,7 +120,9 @@ class SerieFragment : BaseFragment(), SerieContract.View, SerieAdapter.Listener 
         recycler_view_serie.setHasFixedSize(true)
         recycler_view_serie.isNestedScrollingEnabled = false
 
-        recycler_view_serie?.adapter = SerieAdapter(result, requireContext(), this)
+        serieAdapter = SerieAdapter(result, result!!, requireContext(), this)
+
+        recycler_view_serie?.adapter = serieAdapter
     }
 
     override fun showProgress(isShow: Boolean) {
@@ -134,6 +139,31 @@ class SerieFragment : BaseFragment(), SerieContract.View, SerieAdapter.Listener 
         bundle.putParcelable("resultItemSerie", resultItem)
         findNavController().navigate(R.id.action_serieFragment_to_serieDetailsFragment, bundle)
 
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater!!.inflate(R.menu.main, menu)
+
+        val searchItem = menu!!.findItem(R.id.action_search)
+
+        val searchView = searchItem.actionView as SearchView
+
+        searchView.imeOptions = EditorInfo.IME_ACTION_DONE
+
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+
+            override fun onQueryTextChange(newText: String): Boolean {
+                serieAdapter.filter.filter(newText)
+                return false
+            }
+
+            override fun onQueryTextSubmit(query: String): Boolean {
+                // task HERE
+                return false
+            }
+
+        })
     }
 
 }

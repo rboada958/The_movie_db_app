@@ -4,9 +4,6 @@ package com.example.the_movie_db_app.ui.movies
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import androidx.recyclerview.widget.GridLayoutManager
@@ -27,6 +24,9 @@ import kotlinx.android.synthetic.main.fragment_movie.*
 import javax.inject.Inject
 import android.widget.TextView
 import android.graphics.Color
+import android.view.*
+import android.view.inputmethod.EditorInfo
+import androidx.appcompat.widget.SearchView
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.example.the_movie_db_app.ui.MainActivity
@@ -41,6 +41,8 @@ class MovieFragment : BaseFragment(), MoviesContract.View, MoviesAdapter.Listene
     @Inject
     lateinit var presenter: MoviesPresenter
 
+    private lateinit var moviesAdapter: MoviesAdapter
+
     val TAG = MovieFragment::class.java.simpleName
 
     override fun initComponent(appComponent: AppComponent) {
@@ -50,6 +52,7 @@ class MovieFragment : BaseFragment(), MoviesContract.View, MoviesAdapter.Listene
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         initComponent(App.get().component())
+        setHasOptionsMenu(true)
     }
 
     override fun onCreateView(
@@ -130,7 +133,8 @@ class MovieFragment : BaseFragment(), MoviesContract.View, MoviesAdapter.Listene
         recycler_view_movie.setHasFixedSize(true)
         recycler_view_movie.isNestedScrollingEnabled = false
 
-        recycler_view_movie?.adapter = MoviesAdapter(result, requireContext(), this)
+        moviesAdapter = MoviesAdapter(result, result!!, requireContext(), this)
+        recycler_view_movie?.adapter = moviesAdapter
     }
 
     override fun showProgress(isShow: Boolean) {
@@ -146,6 +150,32 @@ class MovieFragment : BaseFragment(), MoviesContract.View, MoviesAdapter.Listene
         val bundle = Bundle()
         bundle.putParcelable("resultItem", resultItem)
         findNavController().navigate(R.id.action_movieFragment_to_movieDetailsFragment, bundle)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater!!.inflate(R.menu.main, menu)
+
+        val searchItem = menu!!.findItem(R.id.action_search)
+
+        val searchView = searchItem.actionView as SearchView
+
+        searchView.imeOptions = EditorInfo.IME_ACTION_DONE
+
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+
+            override fun onQueryTextChange(newText: String): Boolean {
+                moviesAdapter.filter.filter(newText)
+                return false
+            }
+
+            override fun onQueryTextSubmit(query: String): Boolean {
+                // task HERE
+                return false
+            }
+
+        })
+
     }
 
 }
