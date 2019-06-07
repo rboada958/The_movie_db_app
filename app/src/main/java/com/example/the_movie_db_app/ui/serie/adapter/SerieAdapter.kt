@@ -13,10 +13,11 @@ import com.example.the_movie_db_app.ui.serie.models.SerieResult
 
 class SerieAdapter(
     private var result: MutableList<SerieResult>?,
-    private var resultFull: MutableList<SerieResult>,
     private var context: Context,
     private var mListener: Listener
 ) : RecyclerView.Adapter<SerieViewHolder>(), Filterable {
+
+    private var resultFull: MutableList<SerieResult> = result!!
 
     override fun getFilter(): Filter {
         return listFilter

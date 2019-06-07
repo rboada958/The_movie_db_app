@@ -6,13 +6,11 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="107437ff-72cd-4fd8-b208-65c65015c81d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_search.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4/fileHashes/fileHashes.bin" afterDir="false" />
@@ -23,52 +21,21 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.4/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/app/network/di/NetworkModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/app/network/di/NetworkModule.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/MainActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/movies/MovieFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/movies/MovieFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/movies/adapter/MoviesAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/movies/adapter/MoviesAdapter.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/serie/SerieFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/serie/SerieFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/serie/adapter/SerieAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/serie/adapter/SerieAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/utils/Utils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/utils/Utils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/nav_header_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/nav_header_main.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/movies/MovieFragment.kt">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="-357">
-                    <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" selection-end-column="53" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/movies/adapter/MoviesAdapter.kt">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="424">
-                    <caret line="61" column="5" lean-forward="true" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
-                    <folding>
-                      <element signature="e#762#1731#0" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -84,62 +51,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/serie/SerieFragment.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="30" column="80" lean-forward="true" selection-start-line="30" selection-start-column="80" selection-end-line="30" selection-end-column="80" />
-              <folding>
-                <element signature="e#1112#1158#0" />
-                <element signature="e#1410#1535#0" />
-                <element signature="e#1592#1687#0" />
-                <element signature="e#1826#1956#0" />
-                <element signature="e#2030#2110#0" />
-                <element signature="e#2138#3612#0" />
-                <element signature="e#2482#3605#0" />
-                <element signature="e#2553#2684#0" />
-                <element signature="e#2788#3595#0" />
-                <element signature="e#2870#3021#0" />
-                <element signature="e#3047#3201#0" />
-                <element signature="e#3227#3382#0" />
-                <element signature="e#3408#3563#0" />
-                <element signature="e#3689#3784#0" />
-                <element signature="e#3862#3957#0" />
-                <element signature="e#4035#4130#0" />
-                <element signature="e#4201#4487#0" />
-                <element signature="e#4536#4617#0" />
-                <element signature="e#4656#4768#0" />
-                <element signature="e#4820#5014#0" />
-                <element signature="e#5033#5090#0" />
-                <element signature="e#5501#5823#0" />
-                <element signature="e#5573#5670#0" />
-                <element signature="e#5739#5812#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/serie/adapter/SerieAdapter.kt">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/nav_header_main.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="18" column="56" lean-forward="true" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+            <state relative-caret-position="362">
+              <caret line="28" column="76" selection-start-line="28" selection-start-column="76" selection-end-line="28" selection-end-column="76" />
               <folding>
-                <element signature="e#230#276#0" />
-                <element signature="e#296#420#0" />
-                <element signature="e#630#745#0" />
-                <element signature="e#725#1692#0" />
-                <element signature="e#807#1452#0" />
-                <element signature="e#944#1007#1" />
-                <element signature="e#1013#1328#1" />
-                <element signature="e#1148#1314#1" />
-                <element signature="e#1226#1296#1" />
-                <element signature="e#1540#1686#0" />
-                <element signature="e#697#812#0" />
-                <element signature="e#837#889#0" />
+                <element signature="e#1239#1257#0" expanded="true" />
               </folding>
             </state>
           </provider>
+          <provider editor-type-id="android-designer2" />
         </entry>
       </file>
     </leaf>
@@ -147,12 +69,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin Interface" />
         <option value="Kotlin Object" />
-        <option value="Kotlin Class" />
         <option value="navigationResourceFile" />
         <option value="valueResourceFile" />
         <option value="layoutResourceFile_vertical" />
+        <option value="Kotlin Class" />
+        <option value="Kotlin Interface" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -162,34 +85,16 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/movies/di/MoviesModule.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/serie/SerieApi.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/utils/Commons.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/serie/api/SerieApi.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/serie/di/SerieScope.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/movies/di/MoviesScope.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/serie/di/SerieModule.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/serie/di/SerieComponent.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/res/menu/activity_main_drawer.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/background_border_black.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/item_list_movie.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/utils/CustomTypefaseSpan.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/toolbar_layout.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/attrs.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/utils/CustomToolbarView.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_icn_menu.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_back.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/nav_header_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/utils/Utils.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/app_bar_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/movies/models/MovieResult.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/movies/adapter/MoviesViewHolder.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_movie_details.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/serie/adapter/SerieViewHolder.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/navigation/navigation.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/serie/models/SerieResult.kt" />
@@ -206,19 +111,37 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_movie.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_serie.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/MainActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/spinner_dropdown_item.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/spinner_item.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/movies/adapter/MoviesAdapter.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/serie/adapter/SerieAdapter.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/movies/MovieFragment.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/utils/Utils.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/app/network/di/NetworkModule.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_movie_details.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/serie/SerieFragment.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/movies/adapter/MoviesAdapter.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/movies/MovieFragment.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/main/models/ResponseGenre.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/main/models/GenresItem.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/main/mvp/MainContract.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/main/di/MainScope.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/main/di/MainModule.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/main/di/MainComponent.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/main/mvp/MainInteractor.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/main/api/MainApi.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/main/mvp/MainPresenter.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/utils/Prefrences.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/main/MainActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/MainActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/app/App.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/content_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/MainActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/nav_header_main.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="-1374" />
+    <option name="y" value="-6" />
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
@@ -273,7 +196,7 @@
               <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
               <item name="example" type="462c0819:PsiDirectoryNode" />
               <item name="the_movie_db_app" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="The_movie_db_app" type="1abcf292:AndroidViewProjectNode" />
@@ -283,7 +206,6 @@
               <item name="example" type="462c0819:PsiDirectoryNode" />
               <item name="the_movie_db_app" type="462c0819:PsiDirectoryNode" />
               <item name="ui" type="462c0819:PsiDirectoryNode" />
-              <item name="serie" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="The_movie_db_app" type="1abcf292:AndroidViewProjectNode" />
@@ -292,9 +214,7 @@
               <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
               <item name="example" type="462c0819:PsiDirectoryNode" />
               <item name="the_movie_db_app" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-              <item name="serie" type="462c0819:PsiDirectoryNode" />
-              <item name="adapter" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="The_movie_db_app" type="1abcf292:AndroidViewProjectNode" />
@@ -307,12 +227,6 @@
               <item name="res" type="d4f16f75:AndroidResFolderNode" />
               <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
-            <path>
-              <item name="The_movie_db_app" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="menu" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -322,17 +236,18 @@
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="D:/sdk" />
     <property name="device.picker.selection" value="1115fbac572c0e03" />
-    <property name="last_opened_file_path" value="D:/AndroidStudioProjects/Romel/CalculadoraSoberana" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/MovieDbApp-master/MovieDbApp-master" />
     <property name="not.eligible.for.single.variant.sync" value="true" />
     <property name="settings.editor.selected.configurable" value="instant.run" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.example.the_movie_db_app.ui" />
+      <recent name="com.example.the_movie_db_app" />
+      <recent name="com.example.the_movie_db_app.ui.main" />
       <recent name="com.example.the_movie_db_app.ui.serie.api" />
       <recent name="com.example.the_movie_db_app.utils" />
-      <recent name="com.example.the_movie_db_app.app.commons.base.mvp" />
-      <recent name="com.example.the_movie_db_app.ui" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
       <recent name="com.example.the_movie_db_app.utils" />
@@ -437,7 +352,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.23146747" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.23146747" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Build Variants" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
@@ -454,7 +369,7 @@
       <window_info anchor="bottom" id="Event Log" order="6" side_tool="true" weight="0.32993197" />
       <window_info anchor="bottom" id="Flutter Performance" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" x="-1366" y="2" width="1366" height="728" id="Build" order="9" weight="0.25" />
+      <window_info anchor="bottom" x="-1366" y="2" width="1366" height="728" id="Build" order="9" weight="0.9285714" />
       <window_info anchor="bottom" id="Find" order="10" weight="0.32993197" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
@@ -463,199 +378,10 @@
       <window_info anchor="right" id="Flutter Inspector" order="4" />
       <window_info anchor="right" id="Flutter Outline" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Preview" order="7" weight="0.27987897" />
+      <window_info active="true" anchor="right" id="Preview" order="7" visible="true" weight="0.27987897" />
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/movies/di/MoviesScope.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/serie/di/SerieComponent.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding>
-            <element signature="e#50#129#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-mdpi/background_border_white.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="47" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_list_movie.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/serie/api/SerieApi.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="22" column="24" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/slide_left_in.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/utils/CustomTypefaseSpan.kt" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/attrs.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_back.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_icn_menu.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/utils/CustomToolbarView.kt" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/nav_header_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#363#396#0" expanded="true" />
-            <element signature="e#425#460#0" expanded="true" />
-            <element signature="e#490#525#0" expanded="true" />
-            <element signature="e#553#586#0" expanded="true" />
-            <element signature="e#863#899#0" expanded="true" />
-            <element signature="e#993#1018#0" expanded="true" />
-            <element signature="e#1266#1292#0" expanded="true" />
-            <element signature="e#1507#1536#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/utils/Utils.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-          <folding>
-            <element signature="e#105#616#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/app_bar_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="52" lean-forward="true" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="28" lean-forward="true" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-          <folding>
-            <element signature="e#389#429#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="46" lean-forward="true" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
-          <folding>
-            <element signature="e#832#850#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/toolbar_layout.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/movies/models/MovieResult.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="48" column="35" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="35" />
-          <folding>
-            <element signature="e#55#173#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/sdk/sources/android-28/android/widget/AdapterView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="952" column="19" lean-forward="true" selection-start-line="952" selection-start-column="19" selection-end-line="952" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/app/base/mvp/BaseContract.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_movie_details.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-80">
-          <caret line="12" column="38" lean-forward="true" selection-end-line="136" selection-end-column="52" />
-          <folding>
-            <element signature="e#1491#6060#0" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/serie/adapter/SerieViewHolder.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="41" column="35" lean-forward="true" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/navigation/navigation.xml">
-      <provider editor-type-id="nav-designer" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/serie/models/SerieResult.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -712,40 +438,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/movies/api/MoviesApi.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/movies/mvp/MoviesContract.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="43" lean-forward="true" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
-          <folding>
-            <element signature="e#52#178#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/movies/mvp/MoviesPresenter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="48" column="14" lean-forward="true" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/movies/mvp/MoviesInteractor.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="47" lean-forward="true" selection-start-column="47" selection-end-column="47" />
-          <folding>
-            <element signature="e#52#287#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/serie/mvp/SeriePresenter.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -796,14 +488,6 @@
       </provider>
       <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_serie.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="41" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_movie.xml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="697">
@@ -828,94 +512,367 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/MainActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="46" column="9" lean-forward="true" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/main.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#229#252#0" expanded="true" />
-          </folding>
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
       <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/movies/adapter/MoviesAdapter.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/app/network/interceptor/ConnectivityInterceptor.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="61" column="5" lean-forward="true" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
-          <folding>
-            <element signature="e#762#1731#0" />
-          </folding>
+        <state relative-caret-position="136">
+          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/movies/MovieFragment.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/app/network/di/RetrofitModule.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-357">
-          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" selection-end-column="53" />
+        <state relative-caret-position="102">
+          <caret line="19" column="3" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/serie/SerieFragment.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/app/network/di/ApiModule.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="30" column="80" lean-forward="true" selection-start-line="30" selection-start-column="80" selection-end-line="30" selection-end-column="80" />
-          <folding>
-            <element signature="e#1112#1158#0" />
-            <element signature="e#1410#1535#0" />
-            <element signature="e#1592#1687#0" />
-            <element signature="e#1826#1956#0" />
-            <element signature="e#2030#2110#0" />
-            <element signature="e#2138#3612#0" />
-            <element signature="e#2482#3605#0" />
-            <element signature="e#2553#2684#0" />
-            <element signature="e#2788#3595#0" />
-            <element signature="e#2870#3021#0" />
-            <element signature="e#3047#3201#0" />
-            <element signature="e#3227#3382#0" />
-            <element signature="e#3408#3563#0" />
-            <element signature="e#3689#3784#0" />
-            <element signature="e#3862#3957#0" />
-            <element signature="e#4035#4130#0" />
-            <element signature="e#4201#4487#0" />
-            <element signature="e#4536#4617#0" />
-            <element signature="e#4656#4768#0" />
-            <element signature="e#4820#5014#0" />
-            <element signature="e#5033#5090#0" />
-            <element signature="e#5501#5823#0" />
-            <element signature="e#5573#5670#0" />
-            <element signature="e#5739#5812#0" />
-          </folding>
+        <state relative-caret-position="153">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/app/network/di/NetworkModule.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/serie/adapter/SerieAdapter.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="18" column="56" lean-forward="true" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+        <state relative-caret-position="459">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
           <folding>
-            <element signature="e#230#276#0" />
-            <element signature="e#296#420#0" />
-            <element signature="e#630#745#0" />
-            <element signature="e#725#1692#0" />
-            <element signature="e#807#1452#0" />
-            <element signature="e#944#1007#1" />
-            <element signature="e#1013#1328#1" />
-            <element signature="e#1148#1314#1" />
-            <element signature="e#1226#1296#1" />
-            <element signature="e#1540#1686#0" />
-            <element signature="e#697#812#0" />
-            <element signature="e#837#889#0" />
+            <element signature="e#55#290#0" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/movies/adapter/MoviesAdapter.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="20" column="63" lean-forward="true" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/serie/SerieFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="36" column="25" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="25" />
+          <folding>
+            <element signature="e#48#1129#0" expanded="true" />
+            <element signature="e#1131#1177#0" />
+            <element signature="e#1482#1607#0" />
+            <element signature="e#1664#1791#0" />
+            <element signature="e#1930#2060#0" />
+            <element signature="e#2242#3716#0" />
+            <element signature="e#2586#3709#0" />
+            <element signature="e#2657#2788#0" />
+            <element signature="e#2892#3699#0" />
+            <element signature="e#2974#3125#0" />
+            <element signature="e#3151#3305#0" />
+            <element signature="e#3331#3486#0" />
+            <element signature="e#3512#3667#0" />
+            <element signature="e#3793#3888#0" />
+            <element signature="e#3966#4061#0" />
+            <element signature="e#4139#4234#0" />
+            <element signature="e#4305#4601#0" />
+            <element signature="e#4650#4731#0" />
+            <element signature="e#4770#4882#0" />
+            <element signature="e#4934#5128#0" />
+            <element signature="e#5205#5898#0" />
+            <element signature="e#5449#6219#1" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/movies/models/MovieResult.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="48" column="35" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="35" />
+          <folding>
+            <element signature="e#55#173#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/app/base/models/BaseResponse.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="33" lean-forward="true" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_movie_details.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="129" column="27" selection-start-line="129" selection-start-column="27" selection-end-line="129" selection-end-column="27" />
+          <folding>
+            <element signature="e#1491#6060#0" />
+          </folding>
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/movies/api/MoviesApi.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/main/models/GenresItem.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/main/di/MainScope.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/movies/di/MoviesScope.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/main/di/MainModule.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+          <folding>
+            <element signature="e#49#209#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/main/mvp/MainContract.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+          <folding>
+            <element signature="e#50#176#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/movies/di/MoviesModule.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/movies/di/MoviesComponent.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" selection-start-line="10" selection-end-line="14" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/main/mvp/MainInteractor.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="41" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
+          <folding>
+            <element signature="e#50#204#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/main/api/MainApi.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="27" lean-forward="true" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+          <folding>
+            <element signature="e#50#199#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/main/mvp/MainPresenter.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="56" selection-start-line="5" selection-start-column="56" selection-end-line="5" selection-end-column="56" />
+          <folding>
+            <element signature="e#875#897#1" expanded="true" />
+            <element signature="e#1011#1033#1" expanded="true" />
+            <element signature="e#1147#1169#1" expanded="true" />
+            <element signature="e#1302#1327#1" expanded="true" />
+            <element signature="e#1440#1461#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/main/di/MainComponent.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding>
+            <element signature="e#49#128#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_serie.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="30" selection-start-line="30" selection-end-line="38" selection-end-column="55" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/movies/mvp/MoviesContract.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+          <folding>
+            <element signature="e#52#178#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/movies/mvp/MoviesInteractor.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="14" column="64" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/movies/mvp/MoviesPresenter.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-715">
+          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/sdk/sources/android-28/java/util/prefs/Preferences.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="224" column="22" selection-start-line="224" selection-start-column="22" selection-end-line="224" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/main/models/ResponseGenre.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/app/App.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#42#439#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="55" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/movies/MovieFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="37" column="43" lean-forward="true" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
+          <folding>
+            <element signature="e#1208#1254#0" />
+            <element signature="e#1634#1762#0" />
+            <element signature="e#1819#1946#0" />
+            <element signature="e#2085#2215#0" />
+            <element signature="e#2289#2441#0" />
+            <element signature="e#2472#2537#0" />
+            <element signature="e#2565#3950#0" />
+            <element signature="e#2903#3944#0" />
+            <element signature="e#2974#3021#0" />
+            <element signature="e#3125#3934#0" />
+            <element signature="e#3206#3357#0" />
+            <element signature="e#3383#3538#0" />
+            <element signature="e#3564#3720#0" />
+            <element signature="e#3746#3902#0" />
+            <element signature="e#4061#4156#0" />
+            <element signature="e#4235#4330#0" />
+            <element signature="e#4409#4504#0" />
+            <element signature="e#4575#4901#0" />
+            <element signature="e#5190#5378#0" />
+            <element signature="e#5455#6150#0" />
+            <element signature="e#5820#6142#0" />
+            <element signature="e#5892#5989#0" />
+            <element signature="e#6058#6131#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/ui/MainActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="53" lean-forward="true" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
+          <folding>
+            <element signature="e#816#862#0" />
+            <element signature="e#1010#1081#2" />
+            <element signature="e#1138#1265#0" />
+            <element signature="e#1304#1815#0" />
+            <element signature="e#1850#2040#0" />
+            <element signature="e#1913#1983#1" />
+            <element signature="e#1989#2034#1" />
+            <element signature="e#2109#2609#0" />
+            <element signature="e#2222#2354#0" />
+            <element signature="e#2385#2517#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/utils/Prefrences.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2">
+          <caret line="5" column="51" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/the_movie_db_app/utils/Utils.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="30" lean-forward="true" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+          <folding>
+            <element signature="e#44#144#0" expanded="true" />
+            <element signature="e#498#878#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/nav_header_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="28" column="76" selection-start-line="28" selection-start-column="76" selection-end-line="28" selection-end-column="76" />
+          <folding>
+            <element signature="e#1239#1257#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
   </component>
 </project>

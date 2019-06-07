@@ -2,6 +2,7 @@ package com.example.the_movie_db_app.ui.serie
 
 
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import android.view.inputmethod.EditorInfo
 import android.widget.AdapterView
@@ -33,6 +34,7 @@ class SerieFragment : BaseFragment(), SerieContract.View, SerieAdapter.Listener 
     @Inject
     lateinit var presenter: SeriePresenter
 
+    private var serieList: MutableList<SerieResult> = mutableListOf()
     private lateinit var serieAdapter: SerieAdapter
 
     val TAG = SerieFragment::class.java.simpleName
@@ -57,7 +59,7 @@ class SerieFragment : BaseFragment(), SerieContract.View, SerieAdapter.Listener 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        serieAdapter = SerieAdapter(serieList, requireContext(), this)
         onClick()
     }
 
@@ -119,8 +121,8 @@ class SerieFragment : BaseFragment(), SerieContract.View, SerieAdapter.Listener 
         recycler_view_serie.layoutManager = GridLayoutManager(requireContext(), 2)
         recycler_view_serie.setHasFixedSize(true)
         recycler_view_serie.isNestedScrollingEnabled = false
-
-        serieAdapter = SerieAdapter(result, result!!, requireContext(), this)
+        serieList = result!!
+        serieAdapter = SerieAdapter(result, requireContext(), this)
 
         recycler_view_serie?.adapter = serieAdapter
     }
@@ -131,7 +133,6 @@ class SerieFragment : BaseFragment(), SerieContract.View, SerieAdapter.Listener 
 
     override fun makeToast(msg: Int) {
         Commons.makeToast(getString(msg), requireContext())
-        icon_serie.visibility = View.VISIBLE
     }
 
     override fun onClick(resultItem: SerieResult) {
@@ -147,23 +148,26 @@ class SerieFragment : BaseFragment(), SerieContract.View, SerieAdapter.Listener 
 
         val searchItem = menu!!.findItem(R.id.action_search)
 
-        val searchView = searchItem.actionView as SearchView
+        if (searchItem != null) {
+            val searchView = searchItem.actionView as SearchView
 
-        searchView.imeOptions = EditorInfo.IME_ACTION_DONE
+            searchView.imeOptions = EditorInfo.IME_ACTION_DONE
 
-        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
 
             override fun onQueryTextChange(newText: String): Boolean {
+
                 serieAdapter.filter.filter(newText)
                 return false
             }
 
-            override fun onQueryTextSubmit(query: String): Boolean {
-                // task HERE
-                return false
-            }
+                override fun onQueryTextSubmit(query: String?): Boolean {
+                    // task HERE
+                    return true
+                }
 
-        })
+            })
+        }
     }
 
 }

@@ -4,8 +4,10 @@ import android.content.Context
 import android.os.Build
 import com.example.the_movie_db_app.BuildConfig
 import com.example.the_movie_db_app.app.App
+import com.example.the_movie_db_app.app.di.AppModule
 import com.example.the_movie_db_app.app.di.AppScope
 import com.example.the_movie_db_app.app.network.interceptor.ConnectivityInterceptor
+import com.example.the_movie_db_app.utils.Utils.hasNetwork
 import dagger.Module
 import dagger.Provides
 import okhttp3.*
@@ -17,7 +19,7 @@ import java.util.concurrent.TimeUnit
  * Created by Romel Boada on 05/06/19.
  */
 
-@Module
+@Module(includes = [AppModule::class])
 class NetworkModule {
 
     @Provides
@@ -48,24 +50,16 @@ class NetworkModule {
                             cache: Cache): OkHttpClient {
         return OkHttpClient.Builder()
             .addInterceptor(loggingInterceptor)
-            .addInterceptor(ConnectivityInterceptor(App.get()))
-            .addInterceptor(object : Interceptor {
-                lateinit var request: Request
-                override fun intercept(chain: Interceptor.Chain?): Response {
-                    request = chain!!.request().newBuilder()
-                        .addHeader("User-Agent", "Conexpar-ANDROID " +
-                                " BUILD VERSION: " + BuildConfig.VERSION_NAME +
-                                " SMARTPHONE: " + Build.MODEL + " ANDROID VERSION: "
-                                + Build.VERSION.RELEASE)
-                        .addHeader("Content-Type", "application/json")
-                        .build()
-                    return chain.proceed(request)
-                }
-
-            })
-            .readTimeout(30, TimeUnit.SECONDS)
-            .connectTimeout(30, TimeUnit.SECONDS)
             .cache(cache)
+            .addInterceptor { chain ->
+
+                var request = chain.request()
+                request = if (hasNetwork(App.get())!!)
+                    request.newBuilder().header("Cache-Control", "public, max-age=" + 5).build()
+                else
+                    request.newBuilder().header("Cache-Control", "public, only-if-cached, max-stale=" + 60 * 60 * 24 * 7).build()
+                chain.proceed(request)
+            }
             .build()
     }
 }

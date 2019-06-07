@@ -22,14 +22,10 @@ import com.example.the_movie_db_app.utils.Commons
 import com.example.the_movie_db_app.utils.Utils
 import kotlinx.android.synthetic.main.fragment_movie.*
 import javax.inject.Inject
-import android.widget.TextView
-import android.graphics.Color
 import android.view.*
 import android.view.inputmethod.EditorInfo
 import androidx.appcompat.widget.SearchView
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
-import com.example.the_movie_db_app.ui.MainActivity
 
 
 /**
@@ -42,6 +38,7 @@ class MovieFragment : BaseFragment(), MoviesContract.View, MoviesAdapter.Listene
     lateinit var presenter: MoviesPresenter
 
     private lateinit var moviesAdapter: MoviesAdapter
+    private var movieList: MutableList<MovieResult> = mutableListOf()
 
     val TAG = MovieFragment::class.java.simpleName
 
@@ -65,7 +62,7 @@ class MovieFragment : BaseFragment(), MoviesContract.View, MoviesAdapter.Listene
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        moviesAdapter = MoviesAdapter(movieList, requireContext(), this)
         onClick()
     }
 
@@ -133,7 +130,7 @@ class MovieFragment : BaseFragment(), MoviesContract.View, MoviesAdapter.Listene
         recycler_view_movie.setHasFixedSize(true)
         recycler_view_movie.isNestedScrollingEnabled = false
 
-        moviesAdapter = MoviesAdapter(result, result!!, requireContext(), this)
+        moviesAdapter = MoviesAdapter(result, requireContext(), this)
         recycler_view_movie?.adapter = moviesAdapter
     }
 
@@ -143,7 +140,6 @@ class MovieFragment : BaseFragment(), MoviesContract.View, MoviesAdapter.Listene
 
     override fun makeToast(msg: Int) {
         Commons.makeToast(getString(msg), requireContext())
-        icon_movie.visibility = View.VISIBLE
     }
 
     override fun onClick(resultItem: MovieResult?) {

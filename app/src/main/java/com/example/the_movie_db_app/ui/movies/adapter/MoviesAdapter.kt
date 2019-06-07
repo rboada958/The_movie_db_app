@@ -14,10 +14,11 @@ import java.util.ArrayList
 
 class MoviesAdapter(
     private var result: MutableList<MovieResult>?,
-    private var resultFull: MutableList<MovieResult>,
     private var context: Context,
     private var mListener: Listener
 ) : RecyclerView.Adapter<MoviesViewHolder>(), Filterable {
+
+    private var resultFull: MutableList<MovieResult> = result!!
 
     override fun getFilter(): Filter {
         return listFilter
